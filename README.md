@@ -9,3 +9,9 @@ Ici sont disponibles divers ateliers en lien avec le programme du bac pro CIEL :
 - réseaux & IoT
 
 Notez que tous les ateliers ne sont disponibles que sur Linux, pour installer Linux sur votre ordinateur, référez-vous au dépôt "neoteknix".
+
+# ✔️ Nécessaire
+Activer les flakes (flocons) sur NixOS :
+``` bash
+echo 'experimental-features = nix-command flakes' | sudo tee -a /etc/nix/nix.conf
+```
