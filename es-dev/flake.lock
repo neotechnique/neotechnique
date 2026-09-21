@@ -1,0 +1,45 @@
+{
+  "nodes": {
+    "esp-idf": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1766586887,
+        "narHash": "sha256-f4bUrWeMeXlJ+2iCd9eIwLXZ07H71xZJWtrWE1aW8Fs=",
+        "owner": "espressif",
+        "repo": "esp-idf",
+        "rev": "30aaf64524299d3bde422ca9a2848090d1bc5d0f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "espressif",
+        "ref": "v5.5.2",
+        "repo": "esp-idf",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1789921291,
+        "narHash": "sha256-Ft/BRnIqw1MywFoXydKobjjWmDFgDdYtSpJliE8+yUw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "44a91898084f46797b5fac650c7e8c9ac38c43d4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "esp-idf": "esp-idf",
+        "nixpkgs": "nixpkgs"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}

@@ -1,0 +1,62 @@
+{
+  "nodes": {
+    "libremesh": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1788460723,
+        "narHash": "sha256-wuYmhzFHRSvnTW/5fiLJe8DClctRrRnx1KrrZZdnp84=",
+        "owner": "libremesh",
+        "repo": "lime-packages",
+        "rev": "e2876af2d4cb9f04be68dfcaf7340a9369b813d7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "libremesh",
+        "repo": "lime-packages",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1789921291,
+        "narHash": "sha256-Ft/BRnIqw1MywFoXydKobjjWmDFgDdYtSpJliE8+yUw=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "44a91898084f46797b5fac650c7e8c9ac38c43d4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "openwrt": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1738624235,
+        "narHash": "sha256-uZZw0m+Q3AklTt3GVZmBkqiUEMIGLICnzoVOxx3r3Xk=",
+        "owner": "openwrt",
+        "repo": "openwrt",
+        "rev": "1fad1b4965dc6f4e5f4ba7b9605987f443a4c276",
+        "type": "github"
+      },
+      "original": {
+        "owner": "openwrt",
+        "ref": "v24.10.0",
+        "repo": "openwrt",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "libremesh": "libremesh",
+        "nixpkgs": "nixpkgs",
+        "openwrt": "openwrt"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
