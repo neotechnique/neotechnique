@@ -3,31 +3,32 @@
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-  outputs =
-    { nixpkgs, ... }:
+  outputs = { nixpkgs, ... }:
     let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs { inherit system; };
+      systems = [
+        "x86_64-linux"
+      ];
+      forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
-      devShells.${system}.default = pkgs.mkShell {
-        packages = with pkgs; [
-          ruby
-          rubyPackages.rails
-          bundler
-          openssl
-          pkg-config
-          gcc
-          gnumake
-          git
-        ];
-
-        OPENSSL_DIR = pkgs.openssl.dev;
-
-        shellHook = ''
-          echo "Ruby $(ruby --version)"
-          echo "Use: bundle install && bin/rails server"
-        '';
-      };
+      devShells = forAllSystems (system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
+        {
+          default = pkgs.mkShell {
+            packages = [pkgs.ruby_3_4 
+                        pkgs.openssl_3_5];
+            NIX_NO_SELF_RPATH = true;
+            shellHook = ''
+              sudo gem install neocities
+              gem install neocities
+              bundle init
+              echo "gem 'neocities'" >> Gemfile
+              bundle install
+              bundle exec neocities
+            '';
+          };
+        });
     };
 }
