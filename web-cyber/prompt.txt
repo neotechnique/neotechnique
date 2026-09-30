@@ -1,0 +1,1 @@
+Ecris un court 00 README dans 02 WEB qui explique que les ateliers dans ce dossier sont séparés en "défense" et "attaque". l'atelier de défense consiste à développer et publier un site web sur neocities. celui d'attaque consiste à apprendre les techniques de bases pour casser les sites web. chacun des deux a son propre flocon NIX qui doit s'activer avec la commande nix-develop
